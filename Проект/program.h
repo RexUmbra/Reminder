@@ -11,6 +11,7 @@
 #include <thread>
 #include <fstream>
 #include "Struct.h"
+#include <atlconv.h>
 #define _CRT_SECURE_NO_WARNINGS
 using namespace std;
 class Program
@@ -20,6 +21,7 @@ private:
 	time_t realTimeSec;
 	tm* realDateTm = new tm;
 	dateStruct realDate;
+	int amountReminder;
 public:
 	Program();
 	void opredVrem();
@@ -30,6 +32,8 @@ public:
 	void provZad();
 	void main();
 	void save();
+	void download();
+	void threadF();
 
 
 };
