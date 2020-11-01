@@ -97,11 +97,14 @@ void Program::fromStringToWchar_t(string text, wchar_t* text2)
 	
 	for (int i = 0; text[i]; i++)
 	{
-		if (text[i] > 'a' - 1 && text[i] < 'z' + 1)
+		if (text[i] == ' ')
 		{
-			text2[i] = text[i];
+			text2[i] = ' ';
 		}
-		
+		else
+		{
+			text2[i] == text[i];
+		}
 	}
 	
 	//CA2W text2(str.c_str(), CP_UTF8);
